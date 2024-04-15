@@ -4,7 +4,7 @@ version of the TWS API (it was call IB API) in earlier versions.
 Once downloaded, navigate to /twsapi_macunix.976.01/IBJts/source/pythonclient (your version number
 might be different), and 
 run `python3 setup.py install` to install the package. Note that if you are working with venv,
-you must activate the venv before running the install, otherwise the package will be installed
+you must activate the venv before installing, otherwise the package will be installed
 to the base interpreter.
 
 # Client port

@@ -1,12 +1,14 @@
-from ibapi.client import EClient
-from ibapi.wrapper import EWrapper
+import logging
 
-class IBapi(EWrapper, EClient):
-     def __init__(self):
-         EClient.__init__(self, self)
+from src.front_end.MeowTrade import MeowTrade
 
-app = IBapi()
-app.connect('127.0.0.1', 7496, 123)
+
+# setup the logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# create the app
+app = MeowTrade()
+app.connect("127.0.0.1", 7496, clientId=123)  # Ensure the host and port are correct
 app.run()
 
 '''
